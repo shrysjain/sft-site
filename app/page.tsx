@@ -45,7 +45,7 @@ export default function Home() {
       role: "Head of Problem Solving",
       image: "/placeholder.webp",
     },
-    { name: "Person 9", role: "Role 9", image: "/placeholder.webp" },
+    { name: "Ryan Guo", role: "Treasurer", image: "/placeholder.webp" },
     { name: "Person 10", role: "Role 10", image: "/placeholder.webp" },
   ];
 
