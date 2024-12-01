@@ -1,101 +1,161 @@
+import { Navbar } from "../components/Navbar";
+import { Footer } from "../components/Footer";
+import { JoinTeamForm } from "../components/JoinTeamForm";
 import Image from "next/image";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const teamMembers = [
+    {
+      name: "Shaurya Bisht",
+      role: "Chief Executive Officer",
+      image: "/placeholder.webp",
+    },
+    {
+      name: "Shreyas Jain",
+      role: "Chief Technology Officer",
+      image: "/placeholder.webp",
+    },
+    {
+      name: "Victor Cao",
+      role: "Chief Financial Officer",
+      image: "/placeholder.webp",
+    },
+    {
+      name: "Nathan Liang",
+      role: "Chief Information Officer",
+      image: "/placeholder.webp",
+    },
+    {
+      name: "Anika Dureja",
+      role: "Chief Marketing Officer",
+      image: "/placeholder.webp",
+    },
+    {
+      name: "Emily Qiu",
+      role: "Chief Operating Officer",
+      image: "/placeholder.webp",
+    },
+    {
+      name: "Aashika Pesaladinne",
+      role: "Chief Development Officer",
+      image: "/placeholder.webp",
+    },
+    {
+      name: "Isaac Leetyn",
+      role: "Head of Problem Solving",
+      image: "/placeholder.webp",
+    },
+    { name: "Person 9", role: "Role 9", image: "/placeholder.webp" },
+    { name: "Person 10", role: "Role 10", image: "/placeholder.webp" },
+  ];
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  return (
+    <div className="min-h-screen bg-[#FAFAFA] flex flex-col">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-blue-400 to-purple-500">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 opacity-75"></div>
+          <div className="absolute inset-0 bg-grid-white/[0.2] bg-grid-16 [mask-image:linear-gradient(to_bottom,white,transparent)]"></div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <Navbar />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center min-h-[70vh] py-20">
+          <div className="text-left">
+            <h1 className="text-3xl tracking-tight font-extrabold text-white sm:text-4xl md:text-5xl lg:text-6xl">
+              Solve for Tomorrow
+            </h1>
+            <p className="mt-3 max-w-md text-base text-gray-100 sm:text-lg md:mt-4 md:text-xl md:max-w-2xl">
+              Innovating solutions for a brighter future
+            </p>
+            <div className="mt-5 sm:mt-8 sm:flex sm:justify-start">
+              <div className="rounded-md shadow">
+                <a
+                  href="#mission"
+                  className="w-full flex items-center justify-center px-6 py-2 border border-transparent text-base font-medium rounded-md text-blue-700 bg-white hover:bg-gray-50 md:py-3 md:text-lg md:px-8"
+                >
+                  Learn More
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="absolute bottom-0 left-0 right-0">
+          <svg
+            className="w-full h-20 fill-current text-[#FAFAFA]"
+            viewBox="0 0 1440 120"
+            preserveAspectRatio="none"
+          >
+            <path d="M0,0 C480,120 960,120 1440,0 L1440,120 L0,120 Z"></path>
+          </svg>
+        </div>
+      </section>
+
+      {/* Mission Statement Section */}
+      <section id="mission" className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-extrabold text-gray-900 text-center mb-8">
+            Our Mission
+          </h2>
+          <p className="mt-4 text-lg text-gray-500 text-center max-w-3xl mx-auto">
+            We&apos;re mobilizing the brilliance of young minds to drive the
+            future of AI innovation while advancing math education. By
+            transforming student problem-solving into high-value datasets for
+            leading companies in the tech industry, we generate funding to
+            empower underserved communities, foster talent, and redefine what it
+            means to learn and lead in a data-driven world.
+          </p>
+        </div>
+      </section>
+
+      {/* Team Members Section */}
+      <section id="team" className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-extrabold text-gray-900 text-center mb-12">
+            Our Team
+          </h2>
+          <div className="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-5">
+            {teamMembers.map((member, index) => (
+              <div key={index} className="text-center">
+                <div className="space-y-4">
+                  <Image
+                    className="mx-auto h-20 w-20 rounded-full lg:h-24 lg:w-24"
+                    src={member.image}
+                    alt={member.name}
+                    width={96}
+                    height={96}
+                  />
+                  <div className="space-y-2">
+                    <div className="text-xs font-medium lg:text-sm">
+                      <h3 className="text-black">{member.name}</h3>
+                      <p className="text-blue-600">{member.role}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Join the Team Section */}
+      <section id="join" className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-extrabold text-gray-900 text-center mb-8">
+            Join Our Team
+          </h2>
+          <p className="mt-4 text-lg text-gray-500 text-center max-w-3xl mx-auto mb-4">
+            Passionate about solving challenges and contributing to Solve for
+            Tomorrow? We&apos;re always looking for talented individuals to join
+            our team. Send us your application, and let&apos;s create a better
+            future together.
+          </p>
+          <h6 className="text-center mb-8 text-gray-400">
+            Expect to hear back via email in 3-5 business days.
+          </h6>
+          <JoinTeamForm />
+        </div>
+      </section>
+
+      <Footer />
     </div>
   );
 }
