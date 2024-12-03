@@ -46,7 +46,11 @@ export default function Home() {
       image: "/placeholder.webp",
     },
     { name: "Ryan Guo", role: "Treasurer", image: "/placeholder.webp" },
-    { name: "Person 10", role: "Role 10", image: "/placeholder.webp" },
+    {
+      name: "Sarah Park",
+      role: "Head of Community Outreach",
+      image: "/placeholder.webp"
+    },
   ];
 
   return (
