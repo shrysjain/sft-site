@@ -45,7 +45,7 @@ export function Footer() {
               <a href="#" className="text-white hover:text-blue-400">
                 <FaLinkedin size={24} />
               </a>
-              <a href="#" className="text-white hover:text-blue-400">
+              <a href="https://www.instagram.com/solve4tomorrow/" target="_blank" className="text-white hover:text-blue-400">
                 <FaInstagram size={24} />
               </a>
             </div>
